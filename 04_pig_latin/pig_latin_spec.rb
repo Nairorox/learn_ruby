@@ -26,6 +26,16 @@ describe "#translate" do
     expect(s).to eq("appleay")
   end
 
+  it "translates another word beginning with a vowel" do
+    s = translate("big")
+    expect(s).to eq("igbay")
+  end
+
+  it "translates two another word beginning with a vowel" do
+    s = translate("apple apple")
+    expect(s).to eq("appleay appleay")
+  end
+
   it "translates a word beginning with a consonant" do
     s = translate("banana")
     expect(s).to eq("ananabay")
